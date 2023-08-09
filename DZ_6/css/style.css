@@ -1,0 +1,96 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.border {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 20px; 
+  align-items: flex-start;
+}
+
+
+.input-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px; 
+  width: 100%; 
+}
+
+label {
+  margin-right: 10px; 
+  min-width: 80px;
+}
+
+input {
+  width: 100%; 
+}
+
+#input-bigtext textarea{
+  width: 100%;
+  height: 150px;
+  resize: none;
+}
+
+#input-custom-one,
+#input-custom-two,
+#input-custom-three {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#input-custom-one input,
+#input-custom-two input,
+#input-custom-three input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#input-custom-one label,
+#input-custom-two label,
+#input-custom-three label {
+  position: relative;
+  padding-left: 30px;
+}
+
+#input-custom-one label::before,
+#input-custom-two label::before,
+#input-custom-three label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 0.5px solid rgb(46, 149, 63);
+  background-color: white;
+  border-radius: 25%;
+}
+
+#input-custom-one input:checked + label::before,
+#input-custom-two input:checked + label::before,
+#input-custom-three input:checked + label::before {
+  content: "✔";
+  font-size: 18px;
+  text-align: center;
+  line-height: 18px;
+  color: white;
+  background: linear-gradient(rgb(46, 149, 63), rgb(51, 186, 73));
+}
+button{
+  margin-top: 20px;
+}
